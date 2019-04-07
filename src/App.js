@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import EOSIOClient from './eosio-client';
 
 class App extends Component {
+
+  componentDidMount(){
+    const eosClient = new EOSIOClient('appname')
+    eosClient.connect()
+  }
+
   render() {
     return (
       <div className="App">
